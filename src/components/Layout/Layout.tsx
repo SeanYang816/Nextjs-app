@@ -1,15 +1,21 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.scss';
+import styles from './Layout.module.scss';
 import utilStyles from '../../styles/utils.module.scss';
 import Link from 'next/link';
+import Example from '../Example/Example';
 
 const name = 'Anya Forger';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  children: React.ReactNode;
+  home?: boolean;
+}
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
+      {/* <Example /> */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -37,7 +43,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={"text-4xl font-bold"}>{name}</h1>
           </>
         ) : (
           <>
