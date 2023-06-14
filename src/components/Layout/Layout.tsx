@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={"text-4xl font-bold"}>{name}</h1>
           </>
         ) : (
           <>
