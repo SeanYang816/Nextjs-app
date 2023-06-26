@@ -6,6 +6,8 @@ import Layout, { siteTitle } from '../components/Layout/Layout';
 import utilStyles from '../styles/utils.module.scss';
 import { getSortedPostsData } from '../lib/posts';
 
+// test
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
