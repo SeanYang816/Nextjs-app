@@ -8,7 +8,11 @@ import Example from '../Example/Example';
 const name = 'Anya Forger';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  children: React.ReactNode;
+  home?: boolean;
+}
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
       {/* <Example /> */}
