@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './layout.module.scss';
+import styles from './Layout.module.scss';
 import utilStyles from '../../styles/utils.module.scss';
 import Link from 'next/link';
+import Example from '../Example/Example';
 
 const name = 'Anya Forger';
 export const siteTitle = 'Next.js Sample Website';
@@ -10,6 +11,7 @@ export const siteTitle = 'Next.js Sample Website';
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+      {/* <Example /> */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
