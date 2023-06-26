@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data, error } = useSWR('https://randomuser.me/api/', fetcher);
   useEffect(() => {
-    fetch('/api/preview')
+    fetch('/api/hello')
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
